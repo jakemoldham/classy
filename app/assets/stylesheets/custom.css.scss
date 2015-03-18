@@ -1,0 +1,90 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*************************
+
+    Head
+
+*************************/
+
+
+.row {
+  margin-top: 100px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+/*************************
+
+    Index
+
+*************************/
+
+
+#index_space {
+  margin-top: 100px; 
+}
+
+.classified_specs {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 30px;
+  float: left;
+  width: 18%;
+  height: 300px;
+  border: 2px;
+  border-style: solid;
+}
+
+.submit_index {
+  height: 40px;
+  padding: 0 30px;
+}
+
+/*************************
+
+    Edit
+
+*************************/
+
+
+
+.form-control {
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+/*************************
+
+    Show
+
+*************************/
+
+.show_look {
+  margin: 130px 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

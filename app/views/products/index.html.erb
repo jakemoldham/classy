@@ -1,0 +1,14 @@
+
+<div id="index_space"></div>
+  <% @products.each do |p| %>
+    <div class="classified_specs">
+      <h3><%= p.name %></h3>
+      <h3><%= p.description %></h3>
+      <h3><%= p.price %></h3>
+      <h3><%= p.category %></h3>
+      <p><%= link_to "Edit", edit_product_path(p) %></p>
+    </div>
+  <% end %>
+
+
+
