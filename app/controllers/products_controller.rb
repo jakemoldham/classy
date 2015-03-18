@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
       flash[:success] = "your product is updated"
       redirect_to product_path(@product)  # this is the path to the show page
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -31,11 +31,17 @@ class ProductsController < ApplicationController
       flash[:success] = "Welcome, You're Home."
       redirect_to product_path(@product)   # this is the path to the show page
     else
-      render 'new'
+      render :new
     end
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to root_path # notice: "Your classified has been deleted"
+    else
+      render :show # works on validation erros/something went wrong.
+    end
   end
 
   private
@@ -45,3 +51,6 @@ class ProductsController < ApplicationController
   end
 
 end
+
+
+

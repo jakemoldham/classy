@@ -1,14 +1,16 @@
 
-<div id="index_space"></div>
-  <% @products.each do |p| %>
-    <div class="classified_specs">
-      <h3><%= p.name %></h3>
-      <h3><%= p.description %></h3>
-      <h3><%= p.price %></h3>
-      <h3><%= p.category %></h3>
-      <p><%= link_to "Edit", edit_product_path(p) %></p>
-    </div>
-  <% end %>
-
+<body id="home_bgi">
+  <div id="index_space"></div>
+    <% @products.each do |p| %>
+      <div class="classified_specs">
+        <h2><%= p.name %></h2>
+        <h3><%= p.description %></h3>
+        <h3>Price: <%= number_to_currency(p.price) %></h3>
+        <h3><%= p.category %></h3>
+        <%= link_to "Edit", edit_product_path(p) %>
+        <%= link_to "Delete", product_path(p), method: :delete, data: {confirm: "Are you sure?"} %>
+      </div>
+    <% end %>
+</body>
 
 

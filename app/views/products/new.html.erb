@@ -17,9 +17,10 @@
       <%= f.text_field :price, class: 'form-control' %>
       
       <%= f.label :category %>
-      <%= f.text_field :category, class: 'form-control' %>
-
+      <%= f.select :category, options_for_select(%w(Auto Homes Animals Funs Misc)), class: 'form-control' %>
+      <br>
       <%= f.button :submit , class: "btn btn-primary submit_index" %>
     <% end %>
   </div>
 </div>
+
